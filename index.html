@@ -1,114 +1,89 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Простая 2048</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2048 | Главная</title>
+  <link rel="stylesheet" href="shared.css">
 </head>
 <body>
-  <header>
-    <div class="wrapper inner">
-      <div class="logo">2048 сайт</div>
-      <nav>
-        <a href="#banner">Главная</a>
-        <a href="#content1">Как играть</a>
-        <a href="#content2">О игре</a>
-        <a href="#form">Форма</a>
-      </nav>
+
+<header class="main-header">
+  <div class="header-container">
+    <div class="logo">✨ 2048 • MASTER</div>
+    <div class="nav-links">
+      <a href="index.html" class="active">Главная</a>
+      <a href="game.html">Играть в 2048</a>
     </div>
-  </header>
+  </div>
+</header>
 
-  <main class="wrapper">
-    <!-- Баннер -->
-    <section id="banner">
-      <div class="banner-text">
-        <h1>Простая 2048</h1>
-        <p>Наглядный макет популярной игры 2048 на чистых HTML и CSS.</p>
-        <p class="banner-note">Поле ниже — статичный пример расположения плиток без логики игры.</p>
-        <button class="btn" type="button">Новая игра (макет)</button>
+<main class="container">
+  <!-- Секция с демо и призывом -->
+  <div class="section-card">
+    <div class="game-preview">
+      <div class="preview-info">
+        <h1>Классическая 2048</h1>
+        <p class="muted-text">Соединяйте плитки с одинаковыми числами, чтобы получить заветную плитку 2048. Игра развивает логику и стратегическое мышление.</p>
+        <a href="game.html" class="btn-play">🎮 Играть сейчас →</a>
       </div>
-
-      <div class="game-box">
-        <div class="game-header">
-          <span>Счёт: 512</span>
-          <span>Лучший: 2048</span>
+      <div class="demo-game-box">
+        <div class="demo-header"><span>Счёт: 124</span><span>Лучший: 512</span></div>
+        <div class="demo-grid">
+          <div class="demo-cell demo-cell-2">2</div><div class="demo-cell demo-cell-4">4</div><div class="demo-cell demo-cell-2">2</div><div class="demo-cell"></div>
+          <div class="demo-cell demo-cell-8">8</div><div class="demo-cell demo-cell-16">16</div><div class="demo-cell demo-cell-2">2</div><div class="demo-cell"></div>
+          <div class="demo-cell demo-cell-32">32</div><div class="demo-cell demo-cell-64">64</div><div class="demo-cell"></div><div class="demo-cell demo-cell-4">4</div>
+          <div class="demo-cell"></div><div class="demo-cell demo-cell-2">2</div><div class="demo-cell"></div><div class="demo-cell demo-cell-8">8</div>
         </div>
-        <div class="game-grid">
-          <div class="cell cell-2">2</div>
-          <div class="cell cell-2">2</div>
-          <div class="cell cell-4">4</div>
-          <div class="cell"></div>
-
-          <div class="cell cell-4">4</div>
-          <div class="cell cell-8">8</div>
-          <div class="cell"></div>
-          <div class="cell cell-16">16</div>
-
-          <div class="cell cell-32">32</div>
-          <div class="cell"></div>
-          <div class="cell cell-64">64</div>
-          <div class="cell"></div>
-
-          <div class="cell"></div>
-          <div class="cell cell-2">2</div>
-          <div class="cell"></div>
-          <div class="cell cell-4">4</div>
-        </div>
+        <p style="font-size:11px; text-align:center; margin-top:12px;">*демо-поле, без логики</p>
       </div>
-    </section>
+    </div>
+  </div>
 
-    <!-- Секция с контентом 1 -->
-    <section id="content1">
-      <h2 class="section-title">Как устроена игра 2048</h2>
-      <p class="muted">
-        На поле 4×4 появляются плитки с числами. За один ход все плитки двигаются в выбранную сторону.
-        Одинаковые числа складываются, образуя более крупную плитку.
-      </p>
-      <ul class="muted">
-        <li>Используются степени двойки: 2, 4, 8, 16 и т.д.</li>
-        <li>Цель — получить плитку 2048.</li>
-        <li>Если ходов больше нет, игра считается проигранной.</li>
-      </ul>
-    </section>
+  <!-- Как играть -->
+  <div class="section-card">
+    <h2 class="section-title">🎯 Как играть</h2>
+    <p class="muted-text">Используйте <kbd>←</kbd> <kbd>↑</kbd> <kbd>↓</kbd> <kbd>→</kbd> или свайпы, чтобы двигать плитки. Каждый ход добавляется новая плитка 2 или 4. При столкновении одинаковые числа складываются. Цель — набрать 2048!</p>
+  </div>
 
-    <!-- Секция с контентом 2 -->
-    <section id="content2">
-      <h2 class="section-title">О нашем макете</h2>
-      <div class="two-cols">
-        <div>
-          <p class="muted">
-            Этот сайт показывает пример оформления игры 2048. Поле и плитки сделаны из обычных
-            блоков HTML, а внешний вид — с помощью простых стилей CSS.
-          </p>
-        </div>
+  <!-- Форма обратной связи -->
+  <div class="section-card">
+    <h2 class="section-title">📝 Обратная связь</h2>
+    <form id="feedback-form" class="feedback-form">
+      <div class="form-group">
+        <label>Имя</label>
+        <input type="text" id="fb-name" placeholder="Ваше имя">
+        <span class="field-error" id="name-error"></span>
       </div>
-    </section>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" id="fb-email" placeholder="example@mail.com">
+        <span class="field-error" id="email-error"></span>
+      </div>
+      <div class="form-group">
+        <label>Сообщение</label>
+        <textarea id="fb-message" rows="3" placeholder="Ваши пожелания..."></textarea>
+        <span class="field-error" id="msg-error"></span>
+      </div>
+      <button type="submit" class="btn-submit">Отправить отзыв</button>
+      <div id="form-success-msg" style="color:#a7f3d0; font-size:13px;"></div>
+    </form>
+  </div>
 
-    <!-- Секция с формой -->
-    <section id="form">
-      <h2 class="section-title">Форма обратной связи</h2>
-      <p class="muted">Напишите, что бы вы добавили в этот макет 2048.</p>
-      <form>
-        <div>
-          <label for="name">Имя</label>
-          <input type="text" id="name" name="name" />
-        </div>
-        <div>
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" />
-        </div>
-        <div>
-          <label for="message">Сообщение</label>
-          <textarea id="message" name="message"></textarea>
-        </div>
-        <button type="submit" class="btn-submit">Отправить</button>
-      </form>
-    </section>
-  </main>
+  <!-- API данные -->
+  <div class="section-card">
+    <h2 class="section-title">🌐 Данные из открытого API</h2>
+    <p class="muted-text">Пользователи (JSONPlaceholder):</p>
+    <div id="users-list-api" class="api-grid"></div>
+    <button id="load-posts-btn" class="btn-play" style="margin-top:16px; background:#10b981;">📦 Загрузить посты</button>
+    <div id="posts-list-api" class="api-grid" style="margin-top:18px;"></div>
+  </div>
+</main>
 
-  <footer>
-    <div>Простой сайт‑макет 2048 · HTML + CSS</div>
-  </footer>
+<footer>
+  <div>Собери 2048 | Классическая логика | Единый стиль</div>
+</footer>
+
+<script src="main.js"></script>
 </body>
 </html>
