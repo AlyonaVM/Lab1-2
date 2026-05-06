@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>2048 | Играть</title>
+  <link rel="stylesheet" href="shared.css">
+</head>
+<body>
+
+<header class="main-header">
+  <div class="header-container">
+    <div class="logo">✨ 2048 • MASTER</div>
+    <div class="nav-links">
+      <a href="index.html">Главная</a>
+      <a href="game.html" class="active">Играть в 2048</a>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <div class="section-card">
+    <div class="score-panel">
+      <div class="score-cards">
+        <div class="score-block"><span>СЧЁТ</span><div class="score-num" id="gameScore">0</div></div>
+        <div class="score-block"><span>ЛУЧШИЙ</span><div class="score-num" id="gameBest">0</div></div>
+      </div>
+      <button class="new-game-btn" id="resetGameBtn">🔄 НОВАЯ ИГРА</button>
+    </div>
+
+    <!-- Игровое поле -->
+    <div class="game-board" id="gameBoard"></div>
+
+    <div class="message-box" id="gameMessage">🎮 Используй стрелки или проводи пальцем</div>
+
+    <div class="howto" style="margin-top:24px;">
+      <h3>📌 Правила 2048</h3>
+      <p>✔️ Сдвигайте плитки стрелками <kbd>←</kbd> <kbd>↑</kbd> <kbd>↓</kbd> <kbd>→</kbd> или свайпами.</p>
+      <p>✔️ Одинаковые числа объединяются в одно (суммируются).</p>
+      <p>✔️ Достигните плитки <strong>2048</strong> — это победа! Игру можно продолжать.</p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div>2048 · Минимализм · Лучший счёт сохраняется в браузере</div>
+</footer>
+
+<script src="game.js"></script>
+</body>
+</html>
